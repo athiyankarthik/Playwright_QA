@@ -27,7 +27,7 @@ test("Entities", async ({ page }) => {
     await page.locator('a[href="/entities"]').click();
     await expect(page).toHaveURL(/entities/i);
 
-    // Click Add Entities button
+    // Click Add Entities button emk
     await page.getByText('Add Entities').click();
 
     // Fill company name
