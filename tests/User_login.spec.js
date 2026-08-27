@@ -74,7 +74,8 @@ await clientGroup.selectOption('c02a1f55-8f65-4669-97a1-125e629a727e');
 await clientGroup.selectOption({ index: 1 }); // index 0 is the disabled blank option
 
 
-    // Open date picker
+    // Open date pickers
+    
     await page.locator('xpath=(//button[@aria-label="Choose date"])[1]').click();
 
     // Select today's date from the MUI calendar popup (common MUI pattern — verify against your actual markup)
