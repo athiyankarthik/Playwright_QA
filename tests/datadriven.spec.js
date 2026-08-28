@@ -1,5 +1,5 @@
 import {test, expect} from '@playwright/test'
-import cred from '../test-data/facebook.json'
+//import cred from '../test-data/facebook.json'
 test("page navigation", async ({page})=>{
 
     await page.goto("https://www.facebook.com/")

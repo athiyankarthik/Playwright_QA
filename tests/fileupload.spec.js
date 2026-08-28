@@ -1,3 +1,8 @@
+
+ //import {test,expect} from '@playwright/test'
+ const {test,expect}=require('@playwright/test')
+
+
 test("single file upload", async ({ page }) => {
     await page.goto("https://testautomationpractice.blogspot.com/")
 

@@ -31,7 +31,7 @@ test("frameLocator",async({page})=>{
 })
 
 
-test.only("nested iframe", async ({page})=>{
+test("nested iframe", async ({page})=>{
     await page.goto("https://demo.automationtesting.in/Frames.html")
 
     await page.locator('//a[text()="Iframe with in an Iframe"]').click()
