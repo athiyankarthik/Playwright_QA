@@ -1,0 +1,1786 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: User_login.spec.js >> Entities
+- Location: tests\User_login.spec.js:24:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'OK' })
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e4]:
+  - generic [ref=e6]:
+    - banner [ref=e7]:
+      - img "logo" [ref=e10]
+      - button [ref=e11] [cursor=pointer]
+    - list [ref=e15]:
+      - button "Dashboard" [ref=e16] [cursor=pointer]
+      - button "Users" [ref=e19] [cursor=pointer]
+      - button "Approval Process" [ref=e22] [cursor=pointer]
+      - button "Training Log" [ref=e25] [cursor=pointer]
+      - button "Entities" [ref=e28] [cursor=pointer]
+      - button "Adjuster" [ref=e31] [cursor=pointer]
+      - button "Clients" [ref=e34] [cursor=pointer]
+      - button "Claims" [ref=e37] [cursor=pointer]
+      - button "Review Queues" [ref=e40] [cursor=pointer]
+      - button "Claim Analytics" [ref=e43] [cursor=pointer]
+      - button "Acknowledgment" [ref=e46] [cursor=pointer]
+      - button "Workbench" [ref=e49] [cursor=pointer]
+      - button "Dispatch Management" [ref=e52] [cursor=pointer]
+      - button "Data Entry" [ref=e55] [cursor=pointer]
+      - button "Diary" [ref=e58] [cursor=pointer]
+      - list [ref=e61]:
+        - button "Invoice Management" [ref=e62] [cursor=pointer]:
+          - button [ref=e65]
+      - button "Commissions" [ref=e68] [cursor=pointer]
+      - button "Bulk Process" [ref=e71] [cursor=pointer]
+      - button "Time Card" [ref=e74] [cursor=pointer]
+      - button "NIPR" [ref=e77] [cursor=pointer]
+      - list [ref=e80]:
+        - button "License Management" [ref=e81] [cursor=pointer]:
+          - button [ref=e84]
+      - button "Calendar" [ref=e87] [cursor=pointer]
+      - button "Client Group" [ref=e90] [cursor=pointer]
+      - button "Tools" [ref=e93] [cursor=pointer]
+      - button "Bulk Reassignment" [ref=e96] [cursor=pointer]
+      - list [ref=e99]:
+        - button "Administration" [ref=e100] [cursor=pointer]:
+          - button [ref=e103]
+      - button "Email Templates" [ref=e106] [cursor=pointer]
+  - main [ref=e109]:
+    - generic [ref=e111]:
+      - generic [ref=e118]:
+        - generic [ref=e121]:
+          - generic [ref=e122]: Select Type *
+          - generic [ref=e123]:
+            - combobox "Select Type *" [ref=e124]: Claim Number
+            - button "Open" [ref=e126] [cursor=pointer]
+            - group:
+              - generic: Select Type *
+        - generic [ref=e130]:
+          - generic: "Claim #"
+          - generic [ref=e131]:
+            - 'textbox "Claim #" [ref=e132]'
+            - group:
+              - generic: "Claim #"
+        - generic [ref=e133]:
+          - button "Register" [disabled]: Search
+          - button "Register" [disabled]: Clear
+      - generic [ref=e134]:
+        - button "Release Notes" [ref=e136] [cursor=pointer]
+        - button "Notifications" [ref=e142] [cursor=pointer]:
+          - generic [ref=e143]: "0"
+        - button "Knowledge Hub" [ref=e147] [cursor=pointer]
+        - 'button "QA Admin System User Last logged: 08-23-2026 13:08 Q" [ref=e150] [cursor=pointer]':
+          - generic [ref=e151]:
+            - generic [ref=e152]: QA Admin
+            - paragraph [ref=e153]: System User
+            - generic [ref=e154]: "Last logged: 08-23-2026 13:08"
+          - generic [ref=e155]: Q
+    - generic [ref=e158]:
+      - list [ref=e159]:
+        - listitem [ref=e160]:
+          - button "Create Entities" [ref=e161] [cursor=pointer]
+      - generic [ref=e162]:
+        - progressbar [ref=e163]
+        - heading [level=3] [ref=e166]: Loading, please wait
+      - generic [ref=e170]:
+        - generic [ref=e171]:
+          - generic [ref=e172] [cursor=pointer]:
+            - heading "General Information" [level=2] [ref=e174]
+            - generic [ref=e175]:
+              - generic [ref=e176]:
+                - generic [ref=e178]:
+                  - generic [ref=e179]: Entity Type *
+                  - generic [ref=e180]:
+                    - combobox "Entity Type * Client Group * Email Type * Phone Type * Address Type *" [ref=e181]:
+                      - option "Company" [selected]
+                      - option "Individual"
+                    - group:
+                      - generic: Entity Type *
+                - generic [ref=e184]:
+                  - generic [ref=e185]: Company Name *
+                  - generic [ref=e186]:
+                    - textbox "Company Name *" [ref=e187]: AUGUST_1787471005419
+                    - group:
+                      - generic: Company Name *
+              - generic [ref=e188]:
+                - generic [ref=e190]:
+                  - generic [ref=e191]: DOB/Inc
+                  - generic [ref=e192]:
+                    - textbox "DOB/Inc" [ref=e193]:
+                      - /placeholder: MM/DD/YYYY
+                      - text: 08/23/2026
+                    - button "Choose date, selected date is Aug 23, 2026" [ref=e195]
+                    - group:
+                      - generic: DOB/Inc
+                - generic [ref=e200]:
+                  - generic: Remark
+                  - generic [ref=e201]:
+                    - textbox "Remark" [ref=e202]
+                    - group:
+                      - generic: Remark
+              - generic [ref=e203]:
+                - generic [ref=e205]:
+                  - generic [ref=e206]: First Report Due Days *
+                  - generic [ref=e207]:
+                    - textbox "First Report Due Days *" [ref=e208]: "10"
+                    - group:
+                      - generic: First Report Due Days *
+                - generic [ref=e210]:
+                  - generic [ref=e211]: Second Report Due Days *
+                  - generic [ref=e212]:
+                    - textbox "Second Report Due Days *" [ref=e213]: "20"
+                    - group:
+                      - generic: Second Report Due Days *
+                - generic [ref=e215]:
+                  - generic [ref=e216]: Follow Up Report Due Days *
+                  - generic [ref=e217]:
+                    - textbox "Follow Up Report Due Days *" [ref=e218]: "30"
+                    - group:
+                      - generic: Follow Up Report Due Days *
+              - generic [ref=e219]:
+                - generic [ref=e220]:
+                  - generic [ref=e222]:
+                    - generic [ref=e223]: Notification Email *
+                    - generic [ref=e224]:
+                      - textbox "Notification Email *" [ref=e225]: karthik.padmanaban@aroopatech.com
+                      - group:
+                        - generic: Notification Email *
+                  - paragraph [ref=e226]: To add multiple email address use ' ; '
+                - generic [ref=e229]:
+                  - generic [ref=e230]: Role *
+                  - generic [ref=e231]:
+                    - button "Client" [ref=e232]
+                    - combobox "Role *" [ref=e236]
+                    - button "Open" [ref=e238]
+                    - group:
+                      - generic: Role *
+              - generic [ref=e242]:
+                - generic [ref=e244]:
+                  - generic [ref=e245]: Client Group *
+                  - generic [ref=e246]:
+                    - combobox [ref=e247]:
+                      - option [disabled]
+                      - option "21st Century Insurance" [selected]
+                      - option "24/7 Claims Service"
+                      - option "AAA"
+                      - option "AAA Appraisals"
+                      - option "A.A.S.,Inc"
+                      - option "Acadia Insurance"
+                      - option "Acceptance Inc"
+                      - option "Accident Fund Ins. Co. of America"
+                      - option "Accident Insurance Company"
+                      - option "ACE"
+                      - option "Ace Group"
+                      - option "Ace Private Risk Services"
+                      - option "Acuity Insurance"
+                      - option "Acuity Insurance Co"
+                      - option "Adair County Mutual Insurance Association"
+                      - option "Admiral Insurance"
+                      - option "Adventist Risk Management, Inc"
+                      - option "Affiliated FM"
+                      - option "AFICS"
+                      - option "AFICS Commercial"
+                      - option "AFICS TPA"
+                      - option "AFICS -TPA-Specialty"
+                      - option "AFNI Insurance Services"
+                      - option "AGCS Marine Insurance"
+                      - option "AGCS Marine Insurance Company"
+                      - option "AGL Resources"
+                      - option "Ahlstrom USA"
+                      - option "AIG"
+                      - option "Alano Insurance Company"
+                      - option "Alfa Insurance"
+                      - option "Allianz Corporate & Security"
+                      - option "Allianz Global Corporate & Specialty"
+                      - option "Allied Group Insurance"
+                      - option "Allied Insurance"
+                      - option "Allied Solutions"
+                      - option "Allstate"
+                      - option "All State Commercial Ins."
+                      - option "Allstate Insurance"
+                      - option "Allstate Insurance Company West Central Property"
+                      - option "AMCOMP Assurance Corp."
+                      - option "America First"
+                      - option "American Adjusting"
+                      - option "American Bankers Ins Co of FL (ABIC)"
+                      - option "American Bankers Ins Corp"
+                      - option "American Bankers Insurance Company"
+                      - option "American Bankers Insurance Company of Florida"
+                      - option "American Capital"
+                      - option "American Claims Management"
+                      - option "American Claims Service"
+                      - option "American Colonial"
+                      - option "American Commerce Ins."
+                      - option "American Equity Insurance Company"
+                      - option "American Family"
+                      - option "American Family Mutual"
+                      - option "American Fellowship"
+                      - option "American General Financial Services"
+                      - option "American Integrity Insurance Company"
+                      - option "American Keystone Insurance Company"
+                      - option "American Management Claims"
+                      - option "American Management Corp"
+                      - option "American Mercury"
+                      - option "American Modern"
+                      - option "American National"
+                      - option "American National Insurance Company"
+                      - option "American Reliable Insurance Company"
+                      - option "American Security Insurance"
+                      - option "American Security Insurance Company"
+                      - option "American Southern Insurance"
+                      - option "American Specialty"
+                      - option "American Strategic Insurance Corp"
+                      - option "AmeriLaw Attorneys At Law"
+                      - option "AMERIND Risk Management"
+                      - option "Ameriprise"
+                      - option "Ameriprise Auto and Home"
+                      - option "Amerisure"
+                      - option "Amerisure Companies"
+                      - option "AMIC"
+                      - option "AMICA"
+                      - option "Amica Mutual"
+                      - option "AmTrust Group"
+                      - option "Amtrust North America"
+                      - option "Anchor Managing General Agency Inc"
+                      - option "ANPAC"
+                      - option "ANPAC / Farm Family"
+                      - option "Appalachian Underwriters"
+                      - option "Arbella Insurance Group"
+                      - option "Arbella Insurance Group – XACT – CAT"
+                      - option "Arcana Insurance c/o BrightClaim"
+                      - option "Arch Insurance"
+                      - option "Arch Insurance Group"
+                      - option "Arch Insurance Group Inc"
+                      - option "Argo Select"
+                      - option "Arizona Home Insurance"
+                      - option "Arlington Roe"
+                      - option "ARM"
+                      - option "Armed Forces"
+                      - option "ARS Rescue Rooter"
+                      - option "ARU"
+                      - option "ASC"
+                      - option "Ascot - Lender Placed"
+                      - option "ASI Appraisals"
+                      - option "ASI Audit Services, Inc."
+                      - option "ASI Progressive Home"
+                      - option "Aspen Specialty Insurance"
+                      - option "Associated Bank"
+                      - option "Assurant"
+                      - option "Atlanta Casualty"
+                      - option "Atlantic Mutual"
+                      - option "Atlantic Mutual Insurance"
+                      - option "Atlas Financial Holdings Inc"
+                      - option "Atlas General Agency"
+                      - option "Audit Services Inc"
+                      - option "Audubon Insurance Company"
+                      - option "Austin County Farmers Mutual"
+                      - option "Auto"
+                      - option "Auto Club Group"
+                      - option "Auto Club Group / Claimforce"
+                      - option "Auto Owners"
+                      - option "Auto Owners Insurance"
+                      - option "Auto Owners Insurance Co"
+                      - option "Auto Owners Insurance Company"
+                      - option "Avatar Insurance"
+                      - option "Avis Insurance"
+                      - option "Axis"
+                      - option "Bader Company"
+                      - option "Badger Mutual"
+                      - option "Badger Mutual Insurance"
+                      - option "Balboa"
+                      - option "Balboa Insurance"
+                      - option "Baldwin & Lyons Inc"
+                      - option "Baldwin & Lyons, Inc."
+                      - option "Bankers"
+                      - option "Bankers Insurance"
+                      - option "Bankers Insurance Group"
+                      - option "Barry Meyer"
+                      - option "Battermann & Tillery GmbH"
+                      - option "Bayview Loan Servicing LLC"
+                      - option "Benchmark Insurance Co"
+                      - option "Berkley Mid Atlantic"
+                      - option "Berkley North Pacific"
+                      - option "Berkley Risk"
+                      - option "Berkley Southwest"
+                      - option "Berkley Specialty Underwriting"
+                      - option "Berkshire Hathaway"
+                      - option "BinTech Partners, Inc"
+                      - option "Bitco"
+                      - option "Bituminous Insurance"
+                      - option "Blackmon Mooring"
+                      - option "Blair & Company"
+                      - option "Bloss & Dillard Inc"
+                      - option "Bob Kinder & Son Inc"
+                      - option "Bolton & Company"
+                      - option "Bolton / Interstate National Corp"
+                      - option "Bolton/Jefferson"
+                      - option "Boulder Claims (ICAT)"
+                      - option "Bradford Victor-Adams Mutual Ins. Co."
+                      - option "Brad Gilbertson"
+                      - option "Branch Insurance"
+                      - option "Bridgestone"
+                      - option "Bridgeworks Commerical Management"
+                      - option "BrightClaim / American Express"
+                      - option "Bright Claim / Eastman Insurance Co"
+                      - option "BrightClaim / Horace Mann Companies"
+                      - option "BrightClaim, Inc"
+                      - option "BrightClaim / Main Street America Group"
+                      - option "BrightClaim / Main Street American Group"
+                      - option "Broadspire"
+                      - option "Brotherhood Mutual"
+                      - option "Brotherhood Mutual Insurance"
+                      - option "Bryony Bowers Hodges"
+                      - option "Buckeye Insurance"
+                      - option "Buckeye State Mutual"
+                      - option "Budget"
+                      - option "Builders Insurance"
+                      - option "Burlington Insurance Group"
+                      - option "Burns & Wilcox"
+                      - option "Burns & Wilcox LTD"
+                      - option "Cabot Risk Strategies, LLC"
+                      - option "California Casualty"
+                      - option "Cameron Mutual"
+                      - option "Cameron Mutual Insurance"
+                      - option "Capital Insurance Group"
+                      - option "Capitol Indemnity Corporation"
+                      - option "Capitol Preferred Insurance"
+                      - option "Capitol Preferred Insurance Company"
+                      - option "Capitol Preferred Insurance Company NFIP WYO FLOOD"
+                      - option "Capstone ISG"
+                      - option "Carl Warren"
+                      - option "Carl Warren & Company"
+                      - option "Carolina Casualty"
+                      - option "CAS"
+                      - option "Casco Indemnity"
+                      - option "Castle Key Insurance"
+                      - option "Castle Key Insurance Company"
+                      - option "Castle Key Insurance Company – Xact Property"
+                      - option "Catalytic Claims Service"
+                      - option "Catholic Mutual"
+                      - option "CatManDo"
+                      - option "CCMSI"
+                      - option "Celina Insurance"
+                      - option "CenterPoint Energy"
+                      - option "Central Insurance"
+                      - option "Century"
+                      - option "Century Insurance Group"
+                      - option "Century National Insurance"
+                      - option "Century Surety"
+                      - option "Certain Interested Underwriters at Lloyds"
+                      - option "Certus"
+                      - option "CEVA Logistics"
+                      - option "CFM Insurance inc"
+                      - option "CGI/Balboa TPA Claims"
+                      - option "CGU/ Hawkeye"
+                      - option "Charles Schafer"
+                      - option "Charter Catastrophe Services"
+                      - option "Chartis Private Client Group"
+                      - option "Cherokee Insurance"
+                      - option "Chubb"
+                      - option "Church Mutual"
+                      - option "CIC"
+                      - option "Cincinnati Equitable"
+                      - option "Cincinnati Insurance Co"
+                      - option "Cincinnati Insurance Companies"
+                      - option "Citizens"
+                      - option "Citizens Property Insurance Corp CPIC"
+                      - option "Citizens Property Insurance Corporation"
+                      - option "Citzens"
+                      - option "Civic Property & Casualty Company"
+                      - option "CJW"
+                      - option "CJW & Associates"
+                      - option "Claim Adjustment Specialists"
+                      - option "Claim Resolution Partners"
+                      - option "Claims Adjusting Group/CIBA"
+                      - option "Claims Adjusting Group, Inc."
+                      - option "ClaimsCo International Inc"
+                      - option "Claims Management Inc"
+                      - option "Claims Management Resources LP"
+                      - option "Claims Management Services"
+                      - option "Claim Specialists International"
+                      - option "Claims Pro"
+                      - option "ClaimsPro US"
+                      - option "CMD"
+                      - option "CMH Insurance"
+                      - option "CMS"
+                      - option "Collins and Company"
+                      - option "Colodny Fass P.A."
+                      - option "Colonial Penn"
+                      - option "Colony"
+                      - option "Colony Specialty"
+                      - option "Colorado"
+                      - option "Colorado Casualty"
+                      - option "Colorado Casualty (alt)"
+                      - option "Colorado Farm Bureau"
+                      - option "Columbia Insurance Group"
+                      - option "Columbia Lloyds Insurance Company"
+                      - option "Commerce Insurance"
+                      - option "Commercial Insurance Alliance"
+                      - option "Community Association Underwriters (CAU)"
+                      - option "Computer Sciences Corporation"
+                      - option "ConiferInsurance"
+                      - option "Conifer Insurance"
+                      - option "Connect by AmFam"
+                      - option "Connelly Marine Surveyors"
+                      - option "Consistent Claims"
+                      - option "Consumers Insurance"
+                      - option "Continental Western"
+                      - option "Co-operative Insurance"
+                      - option "Cooperative Insurance"
+                      - option "Cooperative Mutual Insurance"
+                      - option "Corelogic Private Flood"
+                      - option "Core Specialty"
+                      - option "Cornerstone National Ins Co"
+                      - option "Cornerstone National Ins Co NFIP WYO Flood"
+                      - option "Cornerstone Operations Group"
+                      - option "Cornhusker"
+                      - option "CorVel Corporation"
+                      - option "Cotton States"
+                      - option "Countryway"
+                      - option "Cozen O'Connor Attorneys"
+                      - option "Cracker Barrel Old Country Store"
+                      - option "Crawford & Company"
+                      - option "Criterion Claim Solutions"
+                      - option "Crum & Forester"
+                      - option "Cruser & Mitchell"
+                      - option "CSAA/AAA"
+                      - option "CSE Insurance Group"
+                      - option "CSE Safeguard Insurance Company"
+                      - option "CSK"
+                      - option "CSL Global"
+                      - option "Culligan International Company"
+                      - option "Cuna"
+                      - option "Cuna Mutual Group"
+                      - option "Cunningham Lindsey"
+                      - option "Custard Claims & Risk Mgmt"
+                      - option "Cypress Insurance Group"
+                      - option "Cypress Property & Casualty Insurance Co"
+                      - option "Daily Underwriters of America"
+                      - option "Damage Claim Services LLC"
+                      - option "Daniel G Suber & Assoc."
+                      - option "Dave Batta"
+                      - option "Demo Client Group 01"
+                      - option "Dentist Benefits Insurance Co."
+                      - option "Dentists Benefits Insurance Co"
+                      - option "Department of Labor"
+                      - option "Desert Specialty Adjusters Inc"
+                      - option "Deutch Kerrigan and Stiles"
+                      - option "Diamond Insurance Group"
+                      - option "Dianna Erickson"
+                      - option "Dimont & Associates"
+                      - option "Doan & Company"
+                      - option "Doan National Claims/ State Auto"
+                      - option "Dodgeland of Columbia Inc"
+                      - option "Dollar General"
+                      - option "Donegal Companies"
+                      - option "Downey Insurance"
+                      - option "Doyle Seelbach"
+                      - option "DTRIC Insurance Co Limited"
+                      - option "Eagle"
+                      - option "Eagle Casualty Assignments"
+                      - option "Eagle Contractor Overlook"
+                      - option "Eagle Test"
+                      - option "Earl R. Whaley & Company"
+                      - option "Earl R. Whaley & Company c/o American National"
+                      - option "EAS Internal"
+                      - option "Edwards Risk Management, Inc"
+                      - option "ELCO"
+                      - option "Electric"
+                      - option "Electric Insurance"
+                      - option "EMCAS"
+                      - option "EMC Insurance"
+                      - option "Emerald Bay Specialty Insurance Company"
+                      - option "Employer's Insurance"
+                      - option "Encompass"
+                      - option "Endurance US Insurance Operations"
+                      - option "Engle Martin Claims"
+                      - option "EPIC"
+                      - option "Erie"
+                      - option "ERIE Charlotte Symbility"
+                      - option "ERIE – Charlotte – Symbility – CAT"
+                      - option "Erie & Niagara Insurance"
+                      - option "ERMC"
+                      - option "ESIS"
+                      - option "Estenson Logistics"
+                      - option "Evans, Simpson and Associates"
+                      - option "Evans Simpson & Associates"
+                      - option "Everett Cash Mutual (ECM)"
+                      - option "Evergreen MGA"
+                      - option "FACT"
+                      - option "Farm Bureau"
+                      - option "Farmers Alliance Mutual"
+                      - option "Farmers Ins. Group"
+                      - option "Farmers Insurance"
+                      - option "Farmers Insurance Company of Flemington"
+                      - option "Farmers & Mechanics Insurance Companies"
+                      - option "Farmers Mutual of Nebraska"
+                      - option "Farmers Mutual of Tennessee"
+                      - option "Farm Family"
+                      - option "Farm Family Casualty Insurance c/o American National"
+                      - option "FCCI"
+                      - option "FCCI Insurance Group"
+                      - option "Federated"
+                      - option "Federated Insurance"
+                      - option "Federated Mutual"
+                      - option "Federated Rural Electric Insurance"
+                      - option "FedEx Freight Inc"
+                      - option "FedNat"
+                      - option "Ferno"
+                      - option "FFIC"
+                      - option "Fidelity National Insurance Company"
+                      - option "FIGA"
+                      - option "FIGA – Florida Specialty Insurance Co"
+                      - option "Financial Insurance Consultants LLC"
+                      - option "Financial Pacific Insurance Company"
+                      - option "Fireman's Fund"
+                      - option "First American"
+                      - option "First Community Insurance Company"
+                      - option "First Fin"
+                      - option "First Guard"
+                      - option "First Guard Insurance Company"
+                      - option "First Managed Care Option"
+                      - option "First Premium/Lloyds"
+                      - option "First Premium/Louisiana Citizens"
+                      - option "Five Star Realty"
+                      - option "Florida Family Insurance"
+                      - option "Florida Farm Bureau"
+                      - option "Florida Farm Bureau Casualty Insurance Company"
+                      - option "Florida Farm Bureau Insurance"
+                      - option "Florida Peninsula Insurance"
+                      - option "Florida Peninsula Insurance Company"
+                      - option "Florida Peninsula Insurance Company – ADR"
+                      - option "FM Claims Management Inc"
+                      - option "FM Global"
+                      - option "FNIS Insurance Services, Inc"
+                      - option "Foremost Insurance Group"
+                      - option "Fortegra"
+                      - option "Fortegra Specialty Insurance Company"
+                      - option "Founders Insurance Company"
+                      - option "Frankenmuth Insurance"
+                      - option "Frank Gates Service Co"
+                      - option "Franklin Insurance Company"
+                      - option "Frontier Adjusters, Inc"
+                      - option "Frontier Mount Carroll Mutual"
+                      - option "Frontline Homeowners Insurance"
+                      - option "G4S"
+                      - option "G4S / AIG"
+                      - option "G4S / Allianz Global Corp"
+                      - option "G4s / Amerisure Insurance"
+                      - option "G4S / Athens Insurance Services"
+                      - option "G4S / Church Mutual"
+                      - option "G4S / Claims Direct Access"
+                      - option "G4S / ESIS"
+                      - option "G4S / Gallagher Bassett Services Inc"
+                      - option "G4S / Hallmark Financial Group"
+                      - option "G4S / IAT Group"
+                      - option "G4S / KB Insurance Co Ltd"
+                      - option "G4S / Liberty Mutual"
+                      - option "G4S / LIG Insurance"
+                      - option "G4S / National Equine Adjusting Inc"
+                      - option "G4S / National General Management Corp"
+                      - option "G4S / Philadelphia Indemnity Ins Co"
+                      - option "G4S / Schneider National Ins"
+                      - option "G4S / State Auto Insurance Columbus OH"
+                      - option "G4S / United Automobile Ins Co"
+                      - option "G4S / Wright Risk Management"
+                      - option "Gallagher Bassett"
+                      - option "Gallagher Bassett – Jetty"
+                      - option "Gallagher Bassett – Jetty Contents"
+                      - option "Galloway, Johnson, Tompkins, Burr & Smith"
+                      - option "Gateway Insurance Company"
+                      - option "Geico"
+                      - option "Gen Corp Aerojet"
+                      - option "General Casualty"
+                      - option "General Star"
+                      - option "General Star Management"
+                      - option "Georgia Underwriting Association"
+                      - option "GeoVera"
+                      - option "Germania Insurance"
+                      - option "German Mutual Insurance"
+                      - option "Germantown Mutual Insurance"
+                      - option "Gibeaut, Mahan & Briscoe"
+                      - option "Gillespie Farm Mutual Insurance Company"
+                      - option "Glatfelter"
+                      - option "Glencoe Group Claims Management"
+                      - option "Global Claim Services"
+                      - option "Global Indemnity Group"
+                      - option "Global Special Risks"
+                      - option "GMAC"
+                      - option "Go America"
+                      - option "Golden Bear Management Corp"
+                      - option "Golden Eagle Insurance"
+                      - option "Golden, Rothschild, Spagnola, Lundell/FFIC"
+                      - option "Goodville Mutual Casualty Company"
+                      - option "Grain Dealers Mutual"
+                      - option "Granada Insurance Company"
+                      - option "Grange"
+                      - option "Grange Insurance"
+                      - option "Grange/Integrity Insurance"
+                      - option "Grange Mutual Ins. Co."
+                      - option "Great American"
+                      - option "Great American Cincinnati (446)"
+                      - option "Great American Seattle"
+                      - option "Great Bay Insurance Group"
+                      - option "Greater New York Insurance"
+                      - option "Great Pacific"
+                      - option "Greatwide Truckload Management"
+                      - option "Grinnell Mutual"
+                      - option "Grinnell Mutual Reinsurance Company"
+                      - option "G$S"
+                      - option "GSI General Inc"
+                      - option "GuideOne"
+                      - option "Gulf Specialty Insurance"
+                      - option "Gulf States Insurance Company"
+                      - option "Hallmark Insurance"
+                      - option "Hallmark Specialty Underwriters"
+                      - option "Hallmark TPA of TX"
+                      - option "Hanover"
+                      - option "Harleysville"
+                      - option "HARRP"
+                      - option "Hartford"
+                      - option "Hastings Mutual"
+                      - option "Hausch & Company"
+                      - option "Hawkeye"
+                      - option "HDR Insurance Services"
+                      - option "Heritage Insurance"
+                      - option "Hertz Claims Management"
+                      - option "Hester Inc"
+                      - option "HGI"
+                      - option "Highlands"
+                      - option "Hinshaw & Culbertson LLP"
+                      - option "HOAIC"
+                      - option "Hochheim Prairie Farm Mutual"
+                      - option "Home & Farm Mutual Insurance"
+                      - option "Home First Agency"
+                      - option "HomeFirst Agency, Inc"
+                      - option "Homeowners Choice"
+                      - option "Homeowners Choice Property & Casualty Insurance Company"
+                      - option "Homeowners of America Insurance Company"
+                      - option "Homesite"
+                      - option "HomeWise Insurance Group"
+                      - option "Hoosier Insurance"
+                      - option "Horace Mann"
+                      - option "Hortica Insurance"
+                      - option "Housing Authority"
+                      - option "Housing Enterprise Insurance"
+                      - option "Housing Specialty Insurance Company Inc"
+                      - option "Hudson Insurance Group"
+                      - option "Huntington National Bank"
+                      - option "IAC"
+                      - option "IAnet Inc"
+                      - option "IAT Group"
+                      - option "IAT Insurance Group"
+                      - option "IAT Specialty"
+                      - option "IBC Insurance"
+                      - option "ICA Daily Claims"
+                      - option "ICS"
+                      - option "ICW Group Insurance Services"
+                      - option "Illinois Casualty Company"
+                      - option "Imperial"
+                      - option "IMT Group"
+                      - option "Independent Adjusting Company"
+                      - option "Indiana"
+                      - option "Indiana Fair Plan"
+                      - option "Indiana Farmers"
+                      - option "Indiana Insurance"
+                      - option "Indiana Lumbermens"
+                      - option "Indigo Insurance LTD"
+                      - option "Infinity"
+                      - option "Innovative Claims Service"
+                      - option "INS Insurance Casualty"
+                      - option "INS Insurance Inc"
+                      - option "Inspire Insurance Solutions"
+                      - option "Insurance Claim Services"
+                      - option "Insurance Claims Specialists, Inc."
+                      - option "Insurors Indemnity"
+                      - option "Intact Insurance Specialty Group"
+                      - option "Integrity Insurance"
+                      - option "Integrity Mutual Insurance Co"
+                      - option "Interboro Insurance"
+                      - option "Intercon Insurance and Financial Services"
+                      - option "Inter Insurance Agency"
+                      - option "International Marine Underwriters"
+                      - option "International Programs Group"
+                      - option "Interstate"
+                      - option "Iowa Mutual Insurance"
+                      - option "ITT Specialty Risk Services"
+                      - option "Jaeger + Haines"
+                      - option "JAG Adjusting"
+                      - option "James M Hoffman & Associates"
+                      - option "James R Favor & Company"
+                      - option "James River Insurance"
+                      - option "JB Lloyd / American National"
+                      - option "JB Lloyd and Associates"
+                      - option "Jefferson Insurance"
+                      - option "Jewelers Mutual Insurance"
+                      - option "JHWest LLC"
+                      - option "JOA Case Management"
+                      - option "Johns Eastern Company"
+                      - option "Joseph Stalmack & Associates, P.C."
+                      - option "JT Miller Company c/o American National"
+                      - option "JWF Specialty Company"
+                      - option "Keith D Silverstein & Associates"
+                      - option "Kemper"
+                      - option "Kentucky Fair Plan"
+                      - option "Kentucky Farm Bureau"
+                      - option "Kentucky National"
+                      - option "Kingstone Insurance Company"
+                      - option "K&K Insurance Group Inc"
+                      - option "Knightbrook Insurance Company"
+                      - option "Knightbrook Insurance Company / Claimforce"
+                      - option "Knight Management Insurance"
+                      - option "Lancer Indemnity Company"
+                      - option "Lancer Insurance"
+                      - option "Landstar System Inc"
+                      - option "LaPrairie Mutual Insurance Company"
+                      - option "Laurence Dorau"
+                      - option "Law Firm of Lewis Brisbois"
+                      - option "Ledgebrook- MS Transverse"
+                      - option "Legacy Insurance"
+                      - option "Legacy Insurance / Claimforce"
+                      - option "Lemars Insurance"
+                      - option "Lemonade Insurance"
+                      - option "Leonard, Andrew, Thomas & Laine Inc"
+                      - option "Lexington Insuarnce"
+                      - option "Lexington Insurance"
+                      - option "Liberty Agency Underwriters"
+                      - option "Liberty International Underwriters"
+                      - option "Liberty Mutual"
+                      - option "Liberty Mutual Agency Market"
+                      - option "Liberty Mutual Commercial Markets"
+                      - option "Liberty Mutual Insurance"
+                      - option "Liberty Mutual Insurance Company"
+                      - option "Life of the South"
+                      - option "Lighthouse Property Insurance"
+                      - option "LightSpeed"
+                      - option "Lititz Mutual"
+                      - option "Livingston Mutual Insurance Co"
+                      - option "Lloyds of London"
+                      - option "Lookingglass Mutual"
+                      - option "Loudoun Mutual"
+                      - option "Louisiana Citizens Property Insurance Co"
+                      - option "Lumberman's Underwriting"
+                      - option "Lumbermen's Underwriting"
+                      - option "L & W Investigations"
+                      - option "Lyndon Property Ins. Co."
+                      - option "Madison Mutual Insurance Company"
+                      - option "Maine Municipal Association"
+                      - option "Maine Mutual Group/MMG Insurance"
+                      - option "Main Street America"
+                      - option "Main Street America Group"
+                      - option "Main Street America Group c/o BrightClaim"
+                      - option "Maison Insurance"
+                      - option "Maison Insurance Company"
+                      - option "MAPFRE Insurance"
+                      - option "Marcus, McMahon & Myers PL"
+                      - option "Markel"
+                      - option "Markel Insurance Company"
+                      - option "Markel Southwest Underwriters, Inc."
+                      - option "Massachusetts & Rhode Island Fair Plans"
+                      - option "Maverick Claims"
+                      - option "Maverick Claims LLC"
+                      - option "Maxum Indemnity Co"
+                      - option "Max Wholeness"
+                      - option "McClelland & Hine, LLC"
+                      - option "McLarens Global Claims Services"
+                      - option "McLarens Young"
+                      - option "McNeil & Co Insurance"
+                      - option "Meadowbrook Insurance Group"
+                      - option "Medical Management Innovations"
+                      - option "Meemic Insurance"
+                      - option "Memorial Health Systems"
+                      - option "Mendota"
+                      - option "Mennonite Mutual Insurance"
+                      - option "Mercer Insurance Group"
+                      - option "Merchants Insurance"
+                      - option "Merchants Insurance Group"
+                      - option "Merchants Mutual Insurance"
+                      - option "Mercury Insurance"
+                      - option "Meridian"
+                      - option "MetLife"
+                      - option "Metro Claims"
+                      - option "Miami"
+                      - option "Miami Insurance Group"
+                      - option "Michael J Curtin & Assoc"
+                      - option "Michigan Insurance"
+                      - option "Michigan Property & Casualty Guarantee Association"
+                      - option "Mid"
+                      - option "MidContinent Group"
+                      - option "Mid Continent Insurance"
+                      - option "Middleoak"
+                      - option "Middlesex Mutual"
+                      - option "Midland Claim Administrators, Inc."
+                      - option "Midlands Claim Administrators"
+                      - option "Midway Insurance Management International inc"
+                      - option "Midwest Claims Services"
+                      - option "Midwest Family Mutual"
+                      - option "MIIA/Cabot Risk"
+                      - option "Millennial Specialty Insurance"
+                      - option "Millers First"
+                      - option "Mills Mehr & Associates"
+                      - option "Milwaukee Insurance"
+                      - option "MiniCo Insurance"
+                      - option "Miniter Group"
+                      - option "Minuteman Adjusters Inc"
+                      - option "Mission Claims"
+                      - option "Mississippi Farm Bureau"
+                      - option "Mississippi Windstorm Underwriting Association"
+                      - option "Missouri Farm Bureau Insurance"
+                      - option "Missouri Property Ins Placement Facility"
+                      - option "Mitsui"
+                      - option "Mohave/Swift Trucking"
+                      - option "Monroe Guaranty"
+                      - option "Montgomery Insurance"
+                      - option "Montpelier Group"
+                      - option "MOS Systems"
+                      - option "Motorists Insurance Group"
+                      - option "Motorists Mutual"
+                      - option "Motor Transport Underwriters"
+                      - option "Motor Truck Underwriter"
+                      - option "Mountain States Insurance Group"
+                      - option "Mountain West Farm Bureau"
+                      - option "Mount Beacon Insurance Company"
+                      - option "Mount Vernon Fire Insurance"
+                      - option "MSA Appraisals"
+                      - option "MSI"
+                      - option "MSP Industries"
+                      - option "Music"
+                      - option "Mutual Aid Exchange"
+                      - option "Mutual Benefit Group"
+                      - option "Mutual Marine"
+                      - option "Mutual of Enumclaw Insurance Co."
+                      - option "Mutual Underwriters"
+                      - option "Narragansett Bay Insurance"
+                      - option "Narragansett Bay Insurance Company"
+                      - option "National American Insurance"
+                      - option "National Claim Services Inc"
+                      - option "National General"
+                      - option "National General / Beyond Flood"
+                      - option "National General Insurance"
+                      - option "National General Insurance Company"
+                      - option "National General Insurance Group"
+                      - option "National General Insurance – Private Flood"
+                      - option "National General NFU"
+                      - option "National Grange"
+                      - option "National Indemnity Company"
+                      - option "National Interstate"
+                      - option "National Lloyds Insurance Company"
+                      - option "National Security Fire & Casualty"
+                      - option "National Subrogation Services"
+                      - option "Nationwide"
+                      - option "Nationwide Appraisals"
+                      - option "Nationwide E&S Specialty"
+                      - option "Nationwide E&S Specialty Insurance"
+                      - option "Nationwide Insurance"
+                      - option "Nationwide Insurance Co"
+                      - option "Nautilus Insurance Group"
+                      - option "NBIS Claims & Risk Management"
+                      - option "NCJUA - North Carolina Joint Underwriting Association"
+                      - option "Network Adjusters"
+                      - option "New York Property Insurance Underwriting Association"
+                      - option "NFIP"
+                      - option "NFIP WYO FLOOD -TORRENT"
+                      - option "NGM"
+                      - option "NGM NFIP WYO FLOOD"
+                      - option "NIE Insurance"
+                      - option "NJM Insurance"
+                      - option "Nodak Mutual Insurance"
+                      - option "Norcross"
+                      - option "Norfolk & Dedham Group"
+                      - option "North American Claim Agency Inc (NACA)"
+                      - option "North American Risk Services Inc"
+                      - option "Northland Insurance"
+                      - option "North Pointe Insurance"
+                      - option "North Star Mutual"
+                      - option "NovaPro Risk Solutions"
+                      - option "N'SITE/American Express"
+                      - option "NSI/West Bend Insurance"
+                      - option "NY"
+                      - option "Oakwood Insurance"
+                      - option "Oakwood Insurance – Mount Beacon"
+                      - option "Occidental/Wilshire Insurance"
+                      - option "Ohio Casualty"
+                      - option "Ohio Fair Plan"
+                      - option "Ohio Mutual"
+                      - option "Oklahoma Farm Bureau Insurance Co."
+                      - option "Old National Insurance"
+                      - option "Omaha Property and Casualty"
+                      - option "OneBeacon Insurance"
+                      - option "Openly LLC"
+                      - option "Oregon Mutual"
+                      - option "Palmetto Adjusters"
+                      - option "Paramount Claims"
+                      - option "Partners Mutual"
+                      - option "Patrons & Farmers Mutual of Missouri"
+                      - option "Paul Davis Restoration"
+                      - option "Peerless"
+                      - option "Pekin"
+                      - option "Pembroke MGA"
+                      - option "Peninsula Insurance Bureau"
+                      - option "Penn Millers Insurance Co"
+                      - option "Pennsylvania Lumbermens Mutual"
+                      - option "Pharmacists Mutual"
+                      - option "Phelps Dunbar LLP"
+                      - option "Phenix Mutual Fire"
+                      - option "Philadelphia Contributionship Ins"
+                      - option "Philadelphia Insurance"
+                      - option "Philanthropic Mutual Fire Insurance"
+                      - option "Phildelphia Insurance"
+                      - option "Pilot Catastrophe CA"
+                      - option "Pilot Flying J"
+                      - option "Pilot Travel Centers, LLC"
+                      - option "Platinum Claims"
+                      - option "PLNAR"
+                      - option "Plover & Associates, Inc."
+                      - option "PLS"
+                      - option "Plymouth Rock"
+                      - option "PMA Insurance Group"
+                      - option "Poe Financial Group"
+                      - option "Precise Adjustments"
+                      - option "Precise Adjustments Inc"
+                      - option "Precision Risk Management"
+                      - option "Preferred Mutual Insurance Co"
+                      - option "Prepared Insurance Company"
+                      - option "Primacy Risk Services"
+                      - option "Prime Insurance Company"
+                      - option "Prime Insurance Syndicate"
+                      - option "Proctor Financial Inc"
+                      - option "Proctor Financial Insurance"
+                      - option "Proctor Loan Protector"
+                      - option "Prodigy Assurance Adjusters"
+                      - option "Professional Claim Investigations Inc"
+                      - option "Progressive"
+                      - option "Pronto Insurance"
+                      - option "Proper Insurance"
+                      - option "ProSight Specialty Insurance"
+                      - option "Protective Insurance Company"
+                      - option "Providence Washington Insurance"
+                      - option "Prudential"
+                      - option "Purdue University"
+                      - option "Pure Insurance"
+                      - option "QBE"
+                      - option "Quaker Oats dba Pepsico"
+                      - option "Quality Drive"
+                      - option "Qualsure"
+                      - option "RAE Adjusters"
+                      - option "Rain and Hail"
+                      - option "Raphael & Associates"
+                      - option "R & D Delivery"
+                      - option "Re"
+                      - option "Red Shield Insurance"
+                      - option "Regional Reporting"
+                      - option "Regions Insurance Inc"
+                      - option "Reliance National Ins."
+                      - option "Reminger Attorneys at Law"
+                      - option "RenRe Insurance"
+                      - option "REO America"
+                      - option "Republic Group"
+                      - option "Republic Western"
+                      - option "Rep West"
+                      - option "Residence Mutual Insurance"
+                      - option "Residential Underwriting Agency"
+                      - option "Risk Enterprise Management"
+                      - option "Risk Enterprise Management Limited"
+                      - option "Risk Placement Services Inc"
+                      - option "Riverport Insurance"
+                      - option "Riverstone Claims Management"
+                      - option "Riverstone International"
+                      - option "RLI Insurance"
+                      - option "Road Commission for Oakland County"
+                      - option "Rockford Mutual"
+                      - option "Rockhill Insurance"
+                      - option "Rockingham Group"
+                      - option "Rockville Risk Management"
+                      - option "Rodli, Beskar, Bolest & Krugers"
+                      - option "Roehl Transport, Inc."
+                      - option "Roush Insurance Services"
+                      - option "RPS"
+                      - option "RSUI"
+                      - option "Ruby Tuesday Inc"
+                      - option "Rural Mutual"
+                      - option "RVOS"
+                      - option "Ryze test client"
+                      - option "Sacopulos, Johnson & Sacopulos"
+                      - option "Saetrum Law Offices"
+                      - option "Safe Auto"
+                      - option "Safeco"
+                      - option "Safe Ins & Inland Mutual"
+                      - option "SafePoint Insurance"
+                      - option "SafePoint Insurance Company"
+                      - option "Sagamore"
+                      - option "SageSure"
+                      - option "Samsung Fire & Marine"
+                      - option "San Diego Gas & Electric / Claimforce"
+                      - option "Sandy & Beaver Valley Farmers Mutual Insurance"
+                      - option "Sawgrass Mutual Insurance Company"
+                      - option "Scarborough Attorneys at Law"
+                      - option "Schendel Pest Services"
+                      - option "Scottsdale"
+                      - option "Seattle Specialty"
+                      - option "Seattle Specialty c/o York"
+                      - option "Seattle Specialty Insurance Services"
+                      - option "SECURA"
+                      - option "Security First Insurance Co"
+                      - option "Sedgwick"
+                      - option "Sedgwick CMS"
+                      - option "Sedgwick – NEC"
+                      - option "Seibels Bruce"
+                      - option "Selective"
+                      - option "Selective Ins Co"
+                      - option "Selective Insurance"
+                      - option "Selective Insurance Company of America"
+                      - option "Selective Way Insurance"
+                      - option "Seneca Insurance"
+                      - option "Seneca Insurance Company Inc."
+                      - option "Seneca Insurance Company, Inc"
+                      - option "Sentry"
+                      - option "Service Insurance Company (Occidental)"
+                      - option "ServiceMaster"
+                      - option "Shelter"
+                      - option "Shelter Insurance"
+                      - option "Shoreline Transportation"
+                      - option "S & H Underwriters Inc"
+                      - option "Simsol Insurance Services Inc"
+                      - option "SIS Group"
+                      - option "Society Insurance"
+                      - option "Sompo Global Risk Solutions"
+                      - option "South Carolina Federal Credit Union"
+                      - option "Southern Farm Bureau"
+                      - option "Southern Fidelity Insurance Company"
+                      - option "Southern Fidelity Property Casualty"
+                      - option "Southern Fidelity Property & Casualty"
+                      - option "Southern Fidelity (SFIC)"
+                      - option "Southern Insurance"
+                      - option "Southern Mutual Insurance"
+                      - option "Southern Oak Insurance Company"
+                      - option "Southern Pioneer Property & Casualty"
+                      - option "Southern Trust Insurance"
+                      - option "Spangler, Jennings & Dougherty PC"
+                      - option "Specialty Claims Management"
+                      - option "Specialty Insurance"
+                      - option "Specialty Insurance Agency"
+                      - option "Specialty Risk Services"
+                      - option "Spirit Delivery & Distribution Services"
+                      - option "SRS"
+                      - option "Standard Adjusting"
+                      - option "Standard Mutual"
+                      - option "State Auto"
+                      - option "Statebridge Company"
+                      - option "State Farm"
+                      - option "State National"
+                      - option "State National Companies / Claimforce"
+                      - option "State of Ohio"
+                      - option "Stephens, Lynn, Klein, La Cava, Hoffman & Puya, P.A."
+                      - option "Sterling Claim Services"
+                      - option "Sterling National Insurance"
+                      - option "Sterling National Insurance Agency Inc."
+                      - option "Sterling National Insurance Agency, Inc."
+                      - option "Sterling National Insurance Agency Inc. Atlanta"
+                      - option "Sterling National Insurance Agency, Inc. C/O Audit Services"
+                      - option "Sterling National Insurance Agency Inc. c/o Audit Services Inc"
+                      - option "Sterling National Insurance Agency Inc. c/o TPA Specialists"
+                      - option "Sterling National Insurance Agency, Inc. Insurance"
+                      - option "Stillwater"
+                      - option "Stillwater Insurance Group"
+                      - option "Stillwater Insurance Group Insurance"
+                      - option "St. Paul"
+                      - option "St. Paul Travelers"
+                      - option "Strategic Comp"
+                      - option "Strong & Hanni Law Firm"
+                      - option "Sublimity Insurance Company"
+                      - option "Sugar Creek Mutual Insurance"
+                      - option "Superior Risk Management Inc"
+                      - option "Surplus Insurance"
+                      - option "SWBC"
+                      - option "Swift Transportation"
+                      - option "Swiss Reinsurance America"
+                      - option "Swyfft LLC"
+                      - option "Synergy Adjusting"
+                      - option "Synergy Adjusting Corporation"
+                      - option "TASB"
+                      - option "TASB (TX Association of School Boards)"
+                      - option "TaskMaster LLC"
+                      - option "TEJ Agency"
+                      - option "Tenessee Farmers Insurance Companies"
+                      - option "Terminix International Company"
+                      - option "Texas FAIR Plan Association"
+                      - option "Texas Schools Cooperative"
+                      - option "Texas Windstorm Insurance Association"
+                      - option "The Assurance Group, Inc."
+                      - option "The Atlas Group of Companies"
+                      - option "The Barton Group"
+                      - option "The Hartford"
+                      - option "The Hudgins Law Firm"
+                      - option "THE Insurance"
+                      - option "The Legacy Group"
+                      - option "The PIP Group"
+                      - option "The Pool"
+                      - option "The Standard Fire Insurance Company"
+                      - option "Thomas Brown"
+                      - option "Thompson & Reilley Attorneys at Law"
+                      - option "TIG"
+                      - option "Tighe, Evan, Schenck & Paras"
+                      - option "Time Insurance Company"
+                      - option "T.M. Mayfield & Co"
+                      - option "TMS National Inc"
+                      - option "Tokio Fire & Marine"
+                      - option "Tower Group"
+                      - option "Tower Hill Insurance"
+                      - option "Tower Hill Insurance Group"
+                      - option "Tower Hill Prime"
+                      - option "TPA Specialists Inc"
+                      - option "TPAS Specialists Inc."
+                      - option "TransGlobal Adjusting"
+                      - option "TransGuard Insurance"
+                      - option "TransGuard Insurance Company of America"
+                      - option "Transport America"
+                      - option "Travelers"
+                      - option "Travelers Indemnity Company"
+                      - option "Tribal First"
+                      - option "Trident Insurance"
+                      - option "Trident Insurance Services"
+                      - option "Tristar Insurance"
+                      - option "Triton Mutual"
+                      - option "TSC Direct Insurance"
+                      - option "Tuscarora Wayne Mutual Insurance"
+                      - option "TWIA"
+                      - option "TWIA (Texas Wind) & TFP (Texas Fair Plan)"
+                      - option "Two Men and a Truck"
+                      - option "TX All Risk"
+                      - option "Tyson Food, Inc."
+                      - option "Umpire"
+                      - option "Underwriting Safety & Claims"
+                      - option "Unigard"
+                      - option "Union Standard"
+                      - option "United Adjusting Services, Inc"
+                      - option "United America"
+                      - option "United America Insurance Company"
+                      - option "United Fire & Casualty Co"
+                      - option "United National Insurance Group"
+                      - option "United States Liability Insurance Company"
+                      - option "Unitrin"
+                      - option "Universal Fire"
+                      - option "Universal North America"
+                      - option "Universal North America Insurance Company"
+                      - option "Universal Property & Casualty Ins Co"
+                      - option "Universal Property & Casualty Insurance Company (UPCIC)"
+                      - option "Universal Property & Casualty Insurance Co (UPCIC)"
+                      - option "Universal TPA Claims"
+                      - option "Universal Underwriters"
+                      - option "Unknown - Legacy /Unassigned"
+                      - option "UPC"
+                      - option "UPC Appraisals"
+                      - option "UPC Insurance"
+                      - option "USAA"
+                      - option "US Adjustment Corp"
+                      - option "US Administrator Claims"
+                      - option "US Claim Solutions"
+                      - option "USF Insurance"
+                      - option "USIC Locating Services LLC"
+                      - option "U.S. Liability Insurance Group"
+                      - option "Utica"
+                      - option "UTICA First"
+                      - option "Utica First Insurance"
+                      - option "Utica National"
+                      - option "Vanguard Claims Administration"
+                      - option "Vanliner Insurance"
+                      - option "Vaughan, Ramsey & Walvoord Attorneys at Law"
+                      - option "Vault Insurance Company"
+                      - option "Velocity Claims"
+                      - option "Velocity Claims LLC"
+                      - option "Veolia"
+                      - option "VeriClaim"
+                      - option "Vermont Mutual Insurance"
+                      - option "Verus Underwriting Managers"
+                      - option "Vesta Insurance"
+                      - option "Victoria Insurance"
+                      - option "Voyager Indemnity Insurance Company"
+                      - option "VS Insurance Services"
+                      - option "Wallace, Saunder"
+                      - option "Wausau Insurance"
+                      - option "Wawanesa Insurance"
+                      - option "Wayne Cooperative Insurance"
+                      - option "Wayne Mutual Insurance Group"
+                      - option "WCF Insurance"
+                      - option "WEA Property & Casualty"
+                      - option "Weaver Investment"
+                      - option "Web Assignment Client"
+                      - option "Wellington Financial Services Inc"
+                      - option "West Bend"
+                      - option "West Bend Mutual"
+                      - option "West Bend Mutual Insurance"
+                      - option "Western Heritage"
+                      - option "Western Mutual Insurance Group"
+                      - option "Western National"
+                      - option "Western Reserve"
+                      - option "Western World Insurance Group"
+                      - option "Westfield"
+                      - option "Westfield Group"
+                      - option "Westfield Insurance"
+                      - option "Westfield Insurance Company"
+                      - option "Westminster American Insurance Co"
+                      - option "Weston Insurance"
+                      - option "Weston Insurance Company"
+                      - option "West Virginia Board of Risk and Insurance Management"
+                      - option "West Virginia Board of Risk Management"
+                      - option "White Pine"
+                      - option "Wiggin & Nourie PA"
+                      - option "Wilson & Berryhill PC"
+                      - option "Wilson Elser Moskowitz Edelman & Dicker LLP"
+                      - option "Wilson Mutual"
+                      - option "Windsor"
+                      - option "Wisconsin Municipal Insurance Co"
+                      - option "Wolverine Mutual"
+                      - option "Workmen's Auto Insurance"
+                      - option "Wright Flood"
+                      - option "XL Insurance"
+                      - option "Yellow Roadway Corporation"
+                      - option "York"
+                      - option "York Risk Services"
+                      - option "York Risk Services Group"
+                      - option "Your Renters Insurance (YRIG)"
+                      - option "YRC Worldwide"
+                      - option "ZC Sterling"
+                      - option "ZC Sterling Atlanta"
+                      - option "ZC Sterling C/O Audit Services"
+                      - option "ZC Sterling c/o Audit Services Inc"
+                      - option "ZC Sterling c/o TPA Specialists"
+                      - option "ZC Sterling Insurance"
+                      - option "ZC Sterling Irvine"
+                      - option "Zurich"
+                      - option "Zurich NA"
+                    - group:
+                      - generic: Client Group *
+                - generic [ref=e248]:
+                  - checkbox "External User" [checked] [ref=e250]
+                  - generic [ref=e253]: External User
+                - generic [ref=e254]:
+                  - checkbox "Test Group" [checked] [ref=e256]
+                  - generic [ref=e259]: Test Group
+              - row [ref=e261]:
+                - cell [ref=e262]:
+                  - heading [level=4] [ref=e263]:
+                    - text: "Reports: ("
+                    - button "Select" [ref=e264]
+                    - text: )
+                - cell
+          - generic [ref=e265]:
+            - generic [ref=e267]:
+              - generic [ref=e270]:
+                - generic [ref=e271]: Email Type *
+                - generic [ref=e272]:
+                  - combobox [ref=e273] [cursor=pointer]:
+                    - option [disabled]
+                    - option "Office" [selected]
+                    - option "Business"
+                    - option "Personal"
+                  - group:
+                    - generic: Email Type *
+              - generic [ref=e276]:
+                - generic [ref=e277]: Email *
+                - generic [ref=e278]:
+                  - textbox "Email *" [ref=e279]: karthik.padmanaban@aroopatech.com
+                  - group:
+                    - generic: Email *
+              - generic [ref=e281] [cursor=pointer]:
+                - checkbox "Default" [checked] [ref=e283]
+                - generic [ref=e286]: Default
+              - button [ref=e289] [cursor=pointer]:
+                - img "addEmail" [ref=e290]
+            - generic [ref=e292] [cursor=pointer]:
+              - generic [ref=e295]:
+                - generic [ref=e296]: Phone Type *
+                - generic [ref=e297]:
+                  - combobox [ref=e298]:
+                    - option [disabled]
+                    - option "Mobile"
+                    - option "Office"
+                    - option "Home"
+                    - option "Fax" [selected]
+                    - option "Other"
+                    - option "Personal"
+                  - group:
+                    - generic: Phone Type *
+              - generic [ref=e301]:
+                - generic [ref=e302]: Phone *
+                - generic [ref=e303]:
+                  - textbox "Phone *" [ref=e304]: (123) 456-7898
+                  - group:
+                    - generic: Phone *
+              - generic [ref=e306]:
+                - checkbox "Default" [checked] [ref=e308]
+                - generic [ref=e311]: Default
+              - button [ref=e314]:
+                - img "addEmail" [ref=e315]
+        - generic [ref=e317] [cursor=pointer]:
+          - generic [ref=e320]:
+            - generic [ref=e321]: Address Type *
+            - generic [ref=e322]:
+              - combobox [ref=e323]:
+                - option [disabled]
+                - option "Residential" [selected]
+                - option "Business"
+                - option "Risk Address"
+                - option "Mailing"
+                - option "Office"
+                - option "Billing"
+              - group:
+                - generic: Address Type *
+          - generic [ref=e326]:
+            - generic [ref=e327]: Address 1 *
+            - generic [ref=e328]:
+              - textbox "Address 1 *" [ref=e329]: QADEMO
+              - group:
+                - generic: Address 1 *
+          - generic [ref=e331]:
+            - generic [ref=e332]: Address 2
+            - generic [ref=e333]:
+              - textbox "Address 2" [ref=e334]: DEMO
+              - group:
+                - generic: Address 2
+          - generic [ref=e337]:
+            - generic [ref=e338]: Zip *
+            - generic [ref=e339]:
+              - textbox "Zip *" [ref=e340]: "10001"
+              - group:
+                - generic: Zip *
+          - generic [ref=e343]:
+            - generic [ref=e344]: City *
+            - generic [ref=e345]:
+              - textbox "City *" [ref=e346]: New York
+              - group:
+                - generic: City *
+          - generic [ref=e349]:
+            - generic [ref=e350]: State *
+            - generic [ref=e351]:
+              - textbox "State *" [ref=e352]: NY
+              - group:
+                - generic: State *
+          - generic [ref=e354]:
+            - checkbox "Default" [checked] [ref=e356]
+            - generic [ref=e359]: Default
+          - button [ref=e362]:
+            - img "addEmail" [ref=e363]
+        - generic [ref=e365]:
+          - heading "Payroll Section" [level=2] [ref=e367]
+          - generic [ref=e371]:
+            - generic [ref=e372]: Tax ID
+            - generic [ref=e373]:
+              - textbox "Tax ID" [ref=e374]: 123-45-6789
+              - group:
+                - generic: Tax ID
+        - generic [ref=e376]:
+          - button [expanded] [ref=e377] [cursor=pointer]:
+            - heading "Client Additional Information" [level=2] [ref=e379]
+          - region "Client Additional Information" [ref=e386]:
+            - generic [ref=e388]:
+              - generic [ref=e390]:
+                - heading "Software Used:" [level=4] [ref=e392]
+                - generic [ref=e394]:
+                  - generic [ref=e395] [cursor=pointer]:
+                    - checkbox "MSB" [ref=e397]
+                    - generic [ref=e400]: MSB
+                  - generic [ref=e401] [cursor=pointer]:
+                    - checkbox "XACT 25.0" [ref=e403]
+                    - generic [ref=e406]: XACT 25.0
+                  - generic [ref=e407] [cursor=pointer]:
+                    - checkbox "XACT 27.0" [ref=e409]
+                    - generic [ref=e412]: XACT 27.0
+                  - generic [ref=e413] [cursor=pointer]:
+                    - checkbox "Other" [ref=e415]
+                    - generic [ref=e418]: Other
+                  - generic [ref=e419] [cursor=pointer]:
+                    - checkbox "XACT 25.1" [ref=e421]
+                    - generic [ref=e424]: XACT 25.1
+                  - generic [ref=e425] [cursor=pointer]:
+                    - checkbox "XACT 27.1" [ref=e427]
+                    - generic [ref=e430]: XACT 27.1
+                  - generic [ref=e431] [cursor=pointer]:
+                    - checkbox "PowerClaim" [ref=e433]
+                    - generic [ref=e436]: PowerClaim
+                  - generic [ref=e437] [cursor=pointer]:
+                    - checkbox "XACT 25.2" [ref=e439]
+                    - generic [ref=e442]: XACT 25.2
+                  - generic [ref=e443] [cursor=pointer]:
+                    - checkbox "XACT 27.3" [ref=e445]
+                    - generic [ref=e448]: XACT 27.3
+                  - generic [ref=e449] [cursor=pointer]:
+                    - checkbox "Simsol" [ref=e451]
+                    - generic [ref=e454]: Simsol
+                  - generic [ref=e455] [cursor=pointer]:
+                    - checkbox "XACT 25.3" [ref=e457]
+                    - generic [ref=e460]: XACT 25.3
+                  - generic [ref=e461] [cursor=pointer]:
+                    - checkbox "XACT 27.5" [ref=e463]
+                    - generic [ref=e466]: XACT 27.5
+                  - generic [ref=e467] [cursor=pointer]:
+                    - checkbox "Symbility" [ref=e469]
+                    - generic [ref=e472]: Symbility
+                  - generic [ref=e473] [cursor=pointer]:
+                    - checkbox "XACT 25.4" [ref=e475]
+                    - generic [ref=e478]: XACT 25.4
+                  - generic [ref=e479] [cursor=pointer]:
+                    - checkbox "XACT 28.0" [ref=e481]
+                    - generic [ref=e484]: XACT 28.0
+                  - generic [ref=e485] [cursor=pointer]:
+                    - checkbox "XACT 24.12" [ref=e487]
+                    - generic [ref=e490]: XACT 24.12
+                  - generic [ref=e491] [cursor=pointer]:
+                    - checkbox "XACT 25.5" [ref=e493]
+                    - generic [ref=e496]: XACT 25.5
+                  - generic [ref=e497] [cursor=pointer]:
+                    - checkbox "XACT ALL" [ref=e499]
+                    - generic [ref=e502]: XACT ALL
+              - generic [ref=e503]:
+                - generic [ref=e504]:
+                  - generic [ref=e506] [cursor=pointer]:
+                    - checkbox "Upload Through Eagle" [ref=e508]
+                    - generic [ref=e511]: Upload Through Eagle
+                  - generic [ref=e513] [cursor=pointer]:
+                    - checkbox "Auto Confirm Report When Loaded ?" [ref=e515]
+                    - generic [ref=e518]: Auto Confirm Report When Loaded ?
+                  - generic [ref=e520] [cursor=pointer]:
+                    - checkbox "Exclude From Tax" [ref=e522]
+                    - generic [ref=e525]: Exclude From Tax
+                - generic [ref=e526]:
+                  - generic [ref=e528] [cursor=pointer]:
+                    - checkbox "TPA" [ref=e530]
+                    - generic [ref=e533]: TPA
+                  - generic [ref=e535] [cursor=pointer]:
+                    - checkbox "Accepts 1099s" [ref=e537]
+                    - generic [ref=e540]: Accepts 1099s
+                  - generic [ref=e542] [cursor=pointer]:
+                    - checkbox "Accepts W-2s" [ref=e544]
+                    - generic [ref=e547]: Accepts W-2s
+                - generic [ref=e548]:
+                  - generic [ref=e550] [cursor=pointer]:
+                    - checkbox "Combine Service and Office Fee" [ref=e552]
+                    - generic [ref=e555]: Combine Service and Office Fee
+                  - generic [ref=e557] [cursor=pointer]:
+                    - checkbox "Autogenerate Weather Reports" [ref=e559]
+                    - generic [ref=e562]: Autogenerate Weather Reports
+                  - generic [ref=e564] [cursor=pointer]:
+                    - checkbox "Send Internal Contact Date to Client(?)" [ref=e566]
+                    - generic [ref=e569]: Send Internal Contact Date to Client(?)
+                - generic [ref=e570]:
+                  - generic [ref=e572] [cursor=pointer]:
+                    - checkbox "Send Acknowledgment Mail" [checked] [ref=e574]
+                    - generic [ref=e577]: Send Acknowledgment Mail
+                  - generic [ref=e579] [cursor=pointer]:
+                    - checkbox "Enable Invision API" [ref=e581]
+                    - generic [ref=e584]: Enable Invision API
+                  - generic [ref=e586] [cursor=pointer]:
+                    - checkbox "Send Invoice Accept Mail" [ref=e588]
+                    - generic [ref=e591]: Send Invoice Accept Mail
+                - generic [ref=e592]:
+                  - generic [ref=e594] [cursor=pointer]:
+                    - checkbox "Invoice Automation" [ref=e596]
+                    - generic [ref=e599]: Invoice Automation
+                  - generic [ref=e601] [cursor=pointer]:
+                    - checkbox "Training Completed" [ref=e603]
+                    - generic [ref=e606]: Training Completed
+                  - generic [ref=e608] [cursor=pointer]:
+                    - checkbox "Auto Suggested Adjuster" [ref=e610]
+                    - generic [ref=e613]: Auto Suggested Adjuster
+                - generic [ref=e614]:
+                  - generic [ref=e616] [cursor=pointer]:
+                    - checkbox "Daily Automation" [ref=e618]
+                    - generic [ref=e621]: Daily Automation
+                  - generic [ref=e623] [cursor=pointer]:
+                    - checkbox "CAT Automation" [ref=e625]
+                    - generic [ref=e628]: CAT Automation
+                  - generic [ref=e630] [cursor=pointer]:
+                    - checkbox "Super CAT Automation" [ref=e632]
+                    - generic [ref=e635]: Super CAT Automation
+                - generic [ref=e636]:
+                  - generic [ref=e638] [cursor=pointer]:
+                    - checkbox "Enable Invoice Creation" [ref=e640]
+                    - generic [ref=e643]: Enable Invoice Creation
+                  - generic [ref=e645] [cursor=pointer]:
+                    - checkbox "Enable Insured Acknowledgement" [ref=e647]
+                    - generic [ref=e650]: Enable Insured Acknowledgement
+                  - generic [ref=e652] [cursor=pointer]:
+                    - checkbox "Enable Pace Report" [ref=e654]
+                    - generic [ref=e657]: Enable Pace Report
+                - generic [ref=e660] [cursor=pointer]:
+                  - checkbox "Enable Audit Service" [ref=e662]
+                  - generic [ref=e665]: Enable Audit Service
+                - generic [ref=e666]:
+                  - generic [ref=e670]:
+                    - generic: Report Email Format
+                    - generic [ref=e671]:
+                      - combobox "Report Email Format" [ref=e672]
+                      - button "Open" [ref=e674] [cursor=pointer]
+                      - group:
+                        - generic: Report Email Format
+                  - generic [ref=e680]:
+                    - generic: Legacy Origin
+                    - generic [ref=e681]:
+                      - combobox "Legacy Origin" [ref=e682]
+                      - button "Open" [ref=e684] [cursor=pointer]
+                      - group:
+                        - generic: Legacy Origin
+                  - generic [ref=e689]:
+                    - generic: Past Due Email
+                    - generic [ref=e690]:
+                      - textbox "Past Due Email" [ref=e691]
+                      - group:
+                        - generic: Past Due Email
+                - generic [ref=e692]:
+                  - generic [ref=e695]:
+                    - generic: Invoice Note
+                    - generic [ref=e696]:
+                      - textbox "Invoice Note" [ref=e697]
+                      - group:
+                        - generic: Invoice Note
+                  - generic [ref=e700]:
+                    - generic: Flat Fee Adjustment
+                    - generic [ref=e701]:
+                      - spinbutton "Flat Fee Adjustment" [ref=e702]
+                      - group:
+                        - generic: Flat Fee Adjustment
+                  - generic [ref=e705]:
+                    - generic: Weather Report Duration (in months)
+                    - generic [ref=e706]:
+                      - spinbutton "Weather Report Duration (in months)" [ref=e707]
+                      - group:
+                        - generic: Weather Report Duration (in months)
+                - generic [ref=e708]:
+                  - generic [ref=e711]:
+                    - generic: Symbility ID
+                    - generic [ref=e712]:
+                      - textbox "Symbility ID" [ref=e713]
+                      - group:
+                        - generic: Symbility ID
+                  - generic [ref=e716]:
+                    - generic: XACT Address
+                    - generic [ref=e717]:
+                      - textbox "XACT Address" [ref=e718]
+                      - group:
+                        - generic: XACT Address
+                  - generic [ref=e721]:
+                    - generic: Profile Code
+                    - generic [ref=e722]:
+                      - textbox "Profile Code" [ref=e723]
+                      - group:
+                        - generic: Profile Code
+                - generic [ref=e724]:
+                  - generic [ref=e728]:
+                    - generic: Account Executive
+                    - generic [ref=e729]:
+                      - combobox "Account Executive" [ref=e730]
+                      - button "Open" [ref=e732] [cursor=pointer]
+                      - group:
+                        - generic: Account Executive
+                  - generic [ref=e738]:
+                    - generic: Account Reps
+                    - generic [ref=e739]:
+                      - combobox "Account Reps" [ref=e740]
+                      - button "Open" [ref=e742] [cursor=pointer]
+                      - group:
+                        - generic: Account Reps
+                  - generic [ref=e748]:
+                    - generic: CAT Account Executive
+                    - generic [ref=e749]:
+                      - combobox "CAT Account Executive" [ref=e750]
+                      - button "Open" [ref=e752] [cursor=pointer]
+                      - group:
+                        - generic: CAT Account Executive
+                - generic [ref=e755]:
+                  - generic [ref=e758]:
+                    - generic: Minimum Mileage Threshold
+                    - generic [ref=e759]:
+                      - textbox "Minimum Mileage Threshold" [ref=e760]
+                      - group:
+                        - generic: Minimum Mileage Threshold
+                  - generic [ref=e763]:
+                    - generic: Maximum Mileage Threshold
+                    - generic [ref=e764]:
+                      - textbox "Maximum Mileage Threshold" [ref=e765]
+                      - group:
+                        - generic: Maximum Mileage Threshold
+                  - generic [ref=e768]:
+                    - generic: Miles Rate
+                    - generic [ref=e769]:
+                      - textbox "Miles Rate" [ref=e770]
+                      - group:
+                        - generic: Miles Rate
+                - generic [ref=e771]:
+                  - generic [ref=e775]:
+                    - generic: Client Organization
+                    - generic [ref=e776]:
+                      - combobox "Client Organization" [ref=e777]
+                      - button "Open" [ref=e779] [cursor=pointer]
+                      - group:
+                        - generic: Client Organization
+                  - generic [ref=e785]:
+                    - generic [ref=e786]: Profit Center *
+                    - generic [ref=e787]:
+                      - combobox "Profit Center *" [ref=e788]: CAT
+                      - button "Open" [ref=e790] [cursor=pointer]
+                      - group:
+                        - generic: Profit Center *
+                  - generic [ref=e796]:
+                    - generic: Operational Manager
+                    - generic [ref=e797]:
+                      - combobox "Operational Manager" [ref=e798]
+                      - button "Open" [ref=e800] [cursor=pointer]
+                      - group:
+                        - generic: Operational Manager
+                  - generic [ref=e805]:
+                    - generic: Client Discount %
+                    - generic [ref=e806]:
+                      - textbox "Client Discount %" [ref=e807]
+                      - group:
+                        - generic: Client Discount %
+                - generic [ref=e808]:
+                  - generic [ref=e811]:
+                    - generic: Client configured File Size (MB)
+                    - generic [ref=e812]:
+                      - textbox "Client configured File Size (MB)" [ref=e813]
+                      - group:
+                        - generic: Client configured File Size (MB)
+                  - generic [ref=e817]:
+                    - generic [ref=e818]: Configure Acknowledgement Recipient
+                    - generic [ref=e819]:
+                      - combobox "Configure Acknowledgement Recipient" [ref=e820]: "No"
+                      - button "Open" [ref=e822] [cursor=pointer]
+                      - group:
+                        - generic: Configure Acknowledgement Recipient
+        - generic [ref=e825]:
+          - button "Register" [disabled]: Create Entities
+          - button "Register" [ref=e826] [cursor=pointer]: Cancel
+    - generic [ref=e827]: Copyright ©2026 RYZE CLAIM SOLUTIONS
+```
+
+# Test source
+
+```ts
+  72  | await clientGroup.selectOption({ label: '21st Century Insurance' });
+  73  | 
+  74  | // OR select by value (the GUID) - more precise but less readable
+  75  | await clientGroup.selectOption('c02a1f55-8f65-4669-97a1-125e629a727e');
+  76  | 
+  77  | // OR select by index if you just need "any one" item
+  78  | await clientGroup.selectOption({ index: 1 }); // index 0 is the disabled blank option
+  79  | 
+  80  | 
+  81  |     // Open date picker
+  82  |     await page.locator('xpath=(//button[@aria-label="Choose date"])[1]').click();
+  83  | 
+  84  |     // Select today's date from the MUI calendar popup (common MUI pattern — verify against your actual markup)
+  85  |     const today = new Date().getDate().toString();
+  86  |     await page.getByRole('gridcell', { name: today, exact: true }).click();
+  87  | 
+  88  |     // Click Update
+  89  |     const updateBtn = page.getByRole('button', { name: 'Update', exact: true });
+  90  |     await expect(updateBtn).toBeEnabled();
+  91  |     await updateBtn.click();
+  92  | 
+  93  |   //Click Test group check_box
+  94  |   await page.locator('input[name="testgroup"]').check();
+  95  | 
+  96  |   //clicks email type field
+  97  | 
+  98  |    await page.locator('select[name="emailtypeid"]').click()
+  99  | 
+  100 |    //Select the drop
+  101 |      await page.locator('select[name="emailtypeid"]').selectOption('Office');
+  102 | 
+  103 |  // await page.locator('select[name="emailtypeid"]').selectOption('c546e6e6-9bfe-4ce5-9c21-929f8eed2343')
+  104 | 
+  105 | //add email address
+  106 | await page.locator('input[name="email"]').fill('karthik.padmanaban@aroopatech.com');
+  107 | 
+  108 | //click phone type as fax
+  109 |   await page.locator('select[name="phonenotypeid"]').click();
+  110 | 
+  111 |     await page.locator('select[name="phonenotypeid"]').selectOption('Fax');
+  112 | 
+  113 |   //await page.locator('select[name="phonenotypeid"]').selectOption('e8b0e99a-525b-4e76-bad3-cac56bfad64d');
+  114 | 
+  115 |    //click phone number field and add thr numbers
+  116 | await page.getByRole('textbox', { name: 'Phone *' }).click();
+  117 | await page.getByRole('textbox', { name: 'Phone *' }).fill('(123) 456-78984');
+  118 | 
+  119 | //Address type
+  120 |   await page.locator('select[name="addresstypeid"]').click();
+  121 |   await page.locator('select[name="addresstypeid"]').selectOption('Residential');
+  122 |   //await page.locator('select[name="addresstypeid"]').selectOption('bb9819a3-52a3-4335-a8ca-9c14cc88033f');
+  123 | 
+  124 |   //Address one
+  125 |   await page.getByRole('textbox', { name: 'Address 1 *' }).click();
+  126 |   await page.getByRole('textbox', { name: 'Address 1 *' }).press('CapsLock');
+  127 |   await page.getByRole('textbox', { name: 'Address 1 *' }).fill('QADEMO');
+  128 | 
+  129 |   //Address two
+  130 |   await page.getByRole('textbox', { name: 'Address 2' }).click();
+  131 |   await page.getByRole('textbox', { name: 'Address 2' }).fill('DEMO');
+  132 | 
+  133 | //zip code 
+  134 |  await page.getByRole('textbox', { name: 'Zip *' }).click();
+  135 |   await page.getByRole('textbox', { name: 'Zip *' }).fill('10001');
+  136 | 
+  137 | 
+  138 | //click create entities button
+  139 | await page.locator('button[value="CreateClient"]').click()
+  140 | 
+  141 | //Tax_id
+  142 | 
+  143 | const taxId = page.locator('input[name="taxid"]');
+  144 | await taxId.fill('123-45-6789');
+  145 | await expect(taxId).toHaveValue('123-45-6789');
+  146 | 
+  147 | 
+  148 | //Accordion panel click
+  149 | 
+  150 | const clientInfoAccordion = page.getByRole('button', { name: 'Client Additional Information' });
+  151 | await clientInfoAccordion.click();
+  152 | await expect(clientInfoAccordion).toHaveAttribute('aria-expanded', 'true');
+  153 | 
+  154 | 
+  155 | //scrolling
+  156 | await page.mouse.wheel(0, 500);
+  157 | 
+  158 | 
+  159 | //profit center
+  160 | 
+  161 |   await page.getByRole('combobox', { name: 'Profit Center *' }).click();
+  162 |   await page.getByRole('option', { name: 'CAT', exact: true }).click();
+  163 | 
+  164 | //click create entities button
+  165 | const createEntityBtn = page.locator('button[value="CreateClient"]');
+  166 | await createEntityBtn.click();
+  167 | 
+  168 | 
+  169 | 
+  170 | //Click ok button
+  171 | 
+> 172 | await page.getByRole('button', { name: 'OK' }).click();
+      |                                                ^ Error: locator.click: Test timeout of 30000ms exceeded.
+  173 | 
+  174 | // await page .pause()
+  175 | 
+  176 | })
+  177 | 
+  178 | 
+```
