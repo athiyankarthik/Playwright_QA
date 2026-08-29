@@ -31,13 +31,15 @@ test("Entities", async ({ page }) => {
     await page.getByText('Add Entities').click();
 
     // Fill company name
-const uniqueCompanyName = `AUGUSTSPRINTTWO_${Date.now()}`;   // 1. generate panu the unique value first
-const companyName = page.getByLabel('Company Name'); // 2. locate panu field
+const today = new Date();
 
-await companyName.fill(uniqueCompanyName);            // 3. fill panu
-await expect(companyName).toHaveValue(uniqueCompanyName);
+const day = String(today.getDate()).padStart(2, '0');
+const month = today.toLocaleString('en-US', { month: 'long' }).toUpperCase();
+const year = today.getFullYear();
 
-console.log(`Company Name entered: ${uniqueCompanyName}`);
+const uniqueCompanyName = `AUGUSTSPRINTWO_${day}_${month}_${year}`;
+
+console.log(uniqueCompanyName);
 
     //Notification mail
     await page.locator('input[name="emailNotiication"]').fill('karthik.padmanaban@aroopatech.com');
@@ -79,8 +81,8 @@ await clientGroup.selectOption({ index: 1 }); // index 0 is the disabled blank o
     await page.locator('xpath=(//button[@aria-label="Choose date"])[1]').click();
 
     // Select today's date from the MUI calendar popup (common MUI pattern — verify against your actual markup)
-    const today = new Date().getDate().toString();
-    await page.getByRole('gridcell', { name: today, exact: true }).click();
+    const todayDate = new Date().getDate().toString();
+    await page.getByRole('gridcell', { name: todayDate, exact: true }).click();
 
     // Click Update
     const updateBtn = page.getByRole('button', { name: 'Update', exact: true });
