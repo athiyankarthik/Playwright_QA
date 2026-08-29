@@ -173,6 +173,7 @@ if (await okButton.isVisible({ timeout: 3000 }).catch(() => false)) {
     await okButton.click();
 }
 
+//close
  await page .pause()
 
 })
