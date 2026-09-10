@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
 
 test.beforeEach("LOGIN", async ({ page }) => {
-    await page.goto("https://dev01.ryzeclaims.com/dashboard")
+    await page.goto("https://dev01.ryzeclaims.com")
 
     await expect(page).toHaveURL(/.*login/);
     await expect(page.locator('input[name="email"]')).toBeVisible();
@@ -21,7 +21,7 @@ test.beforeEach("LOGIN", async ({ page }) => {
     console.log("Successfully logged in")
 })
 
-test("Entities", async ({ page }) => {
+test ("Entities", async ({ page }) => {
 
     // Click Entities side menu
     await page.locator('a[href="/entities"]').click();
@@ -31,15 +31,14 @@ test("Entities", async ({ page }) => {
     await page.getByText('Add Entities').click();
 
     // Fill company name
-const today = new Date();
+// Fill company name
+const uniqueCompanyName = `septemper_SPRINTWO_${Date.now()}`; // 1. gen
+const companyName = page.getByLabel('Company Name'); // 2. locate panu
 
-const day = String(today.getDate()).padStart(2, '0');
-const month = today.toLocaleString('en-US', { month: 'long' }).toUpperCase();
-const year = today.getFullYear();
+await companyName.fill(uniqueCompanyName);
+await expect(companyName).toHaveValue(uniqueCompanyName);
 
-const uniqueCompanyName = `AUGUSTSPRINTWO_${day}_${month}_${year}`;
-
-console.log(uniqueCompanyName);
+console.log(`Company Name entered: ${uniqueCompanyName}`);
 
     //Notification mail
     await page.locator('input[name="emailNotiication"]').fill('karthik.padmanaban@aroopatech.com');
